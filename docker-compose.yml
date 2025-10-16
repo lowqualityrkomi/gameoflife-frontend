@@ -1,0 +1,12 @@
+services:
+  gameoflife-frontend:
+    image: gameoflife-frontend
+    container_name: gameoflife-frontend
+    build:
+      context: .
+      dockerfile: dockerfile
+
+networks:
+  default:
+    name: ${NETWORK_NAME}
+    external: true
